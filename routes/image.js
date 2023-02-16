@@ -24,10 +24,10 @@ router.get("/:imageName",
             for(i=0; i<3;i++)
             {   
                 if(i==0){
-                    url= imageURL + "/1600x900/?"+imageName
+                    url= imageURL + "/1600x900/?",imageName
                 }
                 else if(i==1){
-                    url= imageURL + "/900x400/?"+imageName
+                    url= imageURL + "/900x400/?"+"one,"+imageName
                 }
                 else if(1==2){
                     url= imageURL + "/600x600/?"+imageName
