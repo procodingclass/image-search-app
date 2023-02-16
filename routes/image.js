@@ -30,7 +30,7 @@ router.get("/:imageName",
                     url= imageURL + "/900x400/?"+imageName
                 }
                 else if(1==2){
-                    url= imageURL + "/600x250/?"+imageName
+                    url= imageURL + "/300x150/?"+imageName
                 } 
 
                 images[i] =  await fetch(url)
