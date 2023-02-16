@@ -8,7 +8,7 @@ const router = express.Router();
 const fetch = require('node-fetch');
 
 // set url as constant
-const imageURL = 'https://source.unsplash.com/1100x500/?';
+const imageURL = 'https://source.unsplash.com';
 
 /*
     Get Feeds API endpoint: http://host/api/images/:imagename
@@ -22,9 +22,18 @@ router.get("/:imageName",
             console.log(imageName)
             images = []
             for(i=0; i<3;i++)
-            {
-             
-                images[i] =  await fetch(imageURL+imageName)
+            {   
+                if(i==0){
+                    url= imageURL + "/1100x500/?"+imageName
+                }
+                else if(i==1){
+                    url= imageURL + "/900x400/?"+imageName
+                }
+                else if(1==2){
+                    url= imageURL + "/800x350/?"+imageName
+                } 
+
+                images[i] =  await fetch(url)
                         .then(response => response.url)
                         .then(imageUrl=> {
                             console.log(imageUrl)
@@ -32,13 +41,9 @@ router.get("/:imageName",
                         })
                         .catch(err => console.error(err));
 
-                setTimeout(wait,4000);
+                imageName+",i"        
             }
 
-            function wait()
-            {
-                console.log("waiting")
-            }
 
             // var i = 0;                  //  set your counter to 1
 
