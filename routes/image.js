@@ -32,7 +32,7 @@ router.get("/:imageName",
                         })
                         .catch(err => console.error(err));
 
-                setTimeout(wait,400);
+                setTimeout(wait,4000);
             }
 
             function wait()
