@@ -29,7 +29,7 @@ router.get("/:imageName",
                 else if(i==1){
                     url= imageURL + "/900x400/?"+imageName+",one"
                 }
-                else if(1==2){
+                else if(i==2){
                     url= imageURL + "/100x100/?"+imageName
                 } 
 
