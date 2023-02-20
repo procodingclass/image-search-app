@@ -40,8 +40,7 @@ router.get("/:imageName",
                             return imageUrl
                         })
                         .catch(err => console.error(err));
-
-                imageName+",i"        
+        
             }
 
 
